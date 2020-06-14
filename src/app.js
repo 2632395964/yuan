@@ -42,11 +42,10 @@ new Vue({
     message: 'hi'
   },
   created () {
-    this.$toast()
   },
   methods: {
     showToast(){
-
+      this.$toast('我是message')
     }
   }
 })
