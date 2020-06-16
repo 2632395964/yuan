@@ -16,9 +16,9 @@
         --border-color: #999;
         --border-color-hover: #666;
       }
-      #app {
+      /* #app {
         margin: 20px;
-      }
+      } */
       body {
         font-size: var(--font-size);
       }
@@ -32,9 +32,9 @@
 <body>
 
 <div id="app">
-  <g-tabs :selected.sync="selectedTab">
+  <g-tabs :selected.sync="selectedTab" >
     <g-tabs-head>
-      <template slot="action">
+      <template slot="actions">
         <button>设置</button>
       </template>
       <g-tabs-item name="woman">
