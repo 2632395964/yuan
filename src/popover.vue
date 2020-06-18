@@ -1,9 +1,12 @@
 <template>
-  <div class="popover" @click="xxx">
-    <div class="content-wrapper" v-if="visible">
+  <div class="popover" @click="onClick" ref="popover">
+    <div ref="contentWrapper" class="content-wrapper" v-if="visible">
       <slot name="content"></slot>
     </div>
-    <slot></slot>
+    <span ref="tiggerWrapper">
+      <slot></slot>
+    </span>
+    
   </div>
 </template>
 <script>
@@ -15,8 +18,37 @@ export default {
   }
   },
   methods: {
-    xxx () {
-      this.visible = !this.visible
+    positionContent () {
+      document.body.appendChild(this.$refs.contentWrapper)
+      let{width, heigth, top, left} = this.$refs.tiggerWrapper.getBoundingClientRect()
+      this.$refs.contentWrapper.style.left = left + window.scrollX +'px'
+      this.$refs.contentWrapper.style.top = top + window.scrollY + 'px'
+    },
+    onClickDocument (e) {
+      if (this.$refs.popover && 
+      (this.$refs.popover === e.target ||this.$refs.popover.contains(e.target))
+      ){return}
+      this.close()
+    },
+    open () {
+      this.visible = true
+      this.$nextTick(() => {
+        this.positionContent()
+        document.addEventListener('click', this.onClickDocument)
+      })
+    },
+    close () {
+      this.visible = false
+      document.removeEventListener('click',this.onClickDocument)
+    },
+    onClick (event){
+      if(this.$refs.tiggerWrapper.contains(event.target)){
+        if(this.visible === true){
+          this.close()
+        }else{
+          this.open()
+        }
+      }
     }
   }
 }
@@ -27,13 +59,14 @@ export default {
     display: inline-block;
     vertical-align: top;
     position: relative;
-    .content-wrapper {
+    
+  }
+  .content-wrapper {
       position: absolute;
-      bottom: 100%;
       left: 0;
       border: 1px solid red;
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+      transform: translateY(-100%);
     }
-  }
 
 </style>
