@@ -1,7 +1,7 @@
 <template>
   <div class="col" :class="colClass"
   :style="colStyle" >
-    <slot></slot>
+      <slot></slot>
   </div>
 </template>
 <script>
@@ -69,10 +69,11 @@ export default {
 </script>
 <style lang="scss" scoped>
   .col{
-    height: 100px;
-    background: grey;
+    height: 64px;
+    background: #7ebbeb;
     // width: 50%;
-    border: 1px solid red;
+    border: 1px solid #cccccc;
+    
 
     $class-prefix: col-;
     @for $n from 1 through 24 {

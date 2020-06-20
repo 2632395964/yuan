@@ -4,7 +4,9 @@
   "description": "这是一个UI框架",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "repository": {
     "type": "git",
@@ -22,15 +24,19 @@
   "homepage": "https://github.com/2632395964/gulu#readme",
   "dependencies": {
     "vue": "^2.6.11",
-    "vue-hot-reload-api": "^2.3.4"
+    "vue-hot-reload-api": "^2.3.4",
+    "vue-server-renderer": "^2.6.10"
   },
   "devDependencies": {
     "@vue/component-compiler-utils": "^3.1.2",
+    "node-sass": "^4.13.0",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.26.8",
-    "vue-template-compiler": "^2.6.11"
+    "sass-loader": "^8.0.0",
+    "vue-template-compiler": "^2.6.11",
+    "vuepress": "^1.5.2"
   },
   "alias": {
-    "vue" : "./node_modules/vue/dist/vue.common.js"
+    "vue": "./node_modules/vue/dist/vue.common.js"
   }
 }
