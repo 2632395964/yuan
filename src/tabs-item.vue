@@ -42,18 +42,19 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  $blue:blue;
-  .tabs-item {
-    flex-shrink: 0;
-    padding: 0 1em;
-    cursor: pointer;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    &.active {
-      color: $blue;
-      font-weight: bold;
-    }
-  }
-
+   .tabs-item{
+      flex-shrink: 0;
+      padding: 0 2em;
+      height: 100%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      &:hover{
+         color: #448ef7;
+      }
+      &.active{
+         font-weight: bold;
+         color: #448ef7;
+      }
+   }
 </style>

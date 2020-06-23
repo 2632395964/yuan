@@ -54,5 +54,7 @@
   .collapse {
     border: 1px solid $grey;
     border-radius: $border-radius;
+    cursor: pointer;
+
   }
 </style>

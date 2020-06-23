@@ -30,12 +30,10 @@ module.exports = {
             './components/button',
             './components/input',
             './components/grid',
-            // './components/layout',
-            
-            // './components/collapse',
-            // './components/tabs',
-            // './components/popover',
-            // './components/toast'
+            './components/popover',
+            './components/tabs',
+            './components/toast',
+            './components/collapse',
           ]
       }
     ]
