@@ -16,14 +16,14 @@
 
 ```html
 <g-collapse :selected.sync="selectedItem">
-  <g-collapse-item title="This is panel header 1" name="1">
-    <div>Orange is a kind of fruit</div>
+  <g-collapse-item title="标题1" name="1">
+    <div>内容1</div>
   </g-collapse-item>
-  <g-collapse-item title="This is panel header 2" name="2">
-    <div>Orange is a kind of fruit</div>
+  <g-collapse-item title="标题2" name="2">
+    <div>内容2</div>
   </g-collapse-item>
-  <g-collapse-item title="This is panel header 3" name="3">
-    <div>Orange is a kind of fruit</div>
+  <g-collapse-item title="标题3" name="3">
+    <div>内容3</div>
   </g-collapse-item>
 </g-collapse>
 ```
@@ -50,14 +50,14 @@ data(){
 
 ```html
 <g-collapse :selected.sync="selectedItem" single>
-  <g-collapse-item title="This is panel header 1" name="1">
-    <div>Orange is a kind of  fruit</div>
+  <g-collapse-item title="标题1" name="1">
+    <div>内容1</div>
   </g-collapse-item>
-  <g-collapse-item title="This is panel header 2" name="2">
-    <div>Orange is a kind of fruit</div>
+  <g-collapse-item title="标题2" name="2">
+    <div>内容2</div>
   </g-collapse-item>
-  <g-collapse-item title="This is panel header 3" name="3">
-    <div>Orange is a kind of fruit</div>
+  <g-collapse-item title="标题3" name="3">
+    <div>内容3</div>
   </g-collapse-item>
 </g-collapse>
 ```

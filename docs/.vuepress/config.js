@@ -1,4 +1,6 @@
 module.exports = {
+  base: '/yuan/',
+
   title: "yuan",
   description: '基于Vue的UI组件',
   themeConfig: {
